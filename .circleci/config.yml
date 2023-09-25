@@ -7,12 +7,9 @@ jobs:
       - image: cimg/node:lts
     steps:
       - checkout
-      - setup_remote_docker
       - run:
           name: Create docker network
           command: ./sh/validateJira.sh
-      - store_test_results:
-          path: test-results
 workflows:
   validate:
     jobs:
