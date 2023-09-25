@@ -10,17 +10,10 @@ jobs:
       - setup_remote_docker
       - run:
           name: Create docker network
-          command: docker network create grid
+          command: ./sh/validateJira.sh
       - store_test_results:
-          path: ~/test-results/junit/
-      - store_artifacts:
-          path: ~/testng/results/
+          path: test-results
 workflows:
-  version: 2
   validate:
     jobs:
-      - build:
-          filters:
-            branches:
-              ignore:
-                - master
+      - build
