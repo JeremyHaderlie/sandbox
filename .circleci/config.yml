@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: Create docker network
-          command: ./sh/validateJira.sh
+          command: . sh/validateJira.sh
 workflows:
   validate:
     jobs:
