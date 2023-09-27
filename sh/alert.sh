@@ -26,8 +26,8 @@ alertExit(){
 		echo ""
 		echo "${red}╒${eq49}${normal}"
 		if $boldOn; then echo "${red}├${d49}${normal}"; fi
-		if $boldOn; then echo " ${red}${bold}$alert${normal} "
-		else echo " ${red}$alert${normal} "; fi
+		if $boldOn; then echo -e " ${red}${bold}$alert${normal} "
+		else echo -e " ${red}$alert${normal} "; fi
 		if $boldOn; then echo "${red}├${d49}${normal}"; fi
 		echo "${red}╘${eq49}${normal}"
 		echo ""
@@ -50,8 +50,8 @@ alertNotify(){
 		echo ""
 		echo "${magenta}╒${eq49}${normal}"
 		if $boldOn; then echo "${magenta}├${d49}${normal}"; fi
-		if $boldOn; then echo " ${bold}$alert${normal} "
-		else echo " $alert"; fi
+		if $boldOn; then echo -e " ${bold}$alert${normal} "
+		else echo -e " $alert"; fi
 		if $boldOn; then echo "${magenta}├${d49}${normal}"; fi
 		echo "${magenta}╘${eq49}${normal}"
 		echo ""
@@ -78,8 +78,8 @@ alertSection(){
 			echo ""
 			echo "${bold}${green}╔${eq49}${normal}"
 			if $boldOn; then echo "${green}╟${d49}${normal}"; fi
-			if $boldOn; then echo "${green}║${normal} ${bold}START $alert${normal} "
-			else echo "${green}║${normal} ${bold}START${normal} $alert "; fi
+			if $boldOn; then echo -e "${green}║${normal} ${bold}START $alert${normal} "
+			else echo -e "${green}║${normal} ${bold}START${normal} $alert "; fi
 			echo "${green}║${normal}╭${d48}"
 			echo "╭╯"
 		fi
@@ -87,8 +87,8 @@ alertSection(){
 	if [ "$location" == "end" ]; then
 			echo "╰╮"
 			echo "${green}║${normal}╰${d48}"
-			if $boldOn; then echo "${green}║${normal} ${bold}END $alert${normal} "
-			else echo "${green}║${normal} ${bold}END${normal} $alert "; fi
+			if $boldOn; then echo -e "${green}║${normal} ${bold}END $alert${normal} "
+			else echo -e "${green}║${normal} ${bold}END${normal} $alert "; fi
 			if $boldOn; then echo "${green}╟${d49}${normal}"; fi
 			echo "${bold}${green}╚${eq49}${normal}"
 			echo ""
@@ -101,7 +101,7 @@ alertSection(){
 }
 
 alertEof(){
-	tput setaf 3;echo "╔▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾╗\n║  ─┬─ ╭──╮ ╷  ╷ ║\n║   │  │  │ ├──┤ ║\n║ ╰─╯  ╰──╯ ╵  ╵ ║\n╚▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴╝"; tput sgr0
+	tput setaf 3;echo -e "╔▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾▾╗\n║  ─┬─ ╭──╮ ╷  ╷ ║\n║   │  │  │ ├──┤ ║\n║ ╰─╯  ╰──╯ ╵  ╵ ║\n╚▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴▴╝"; tput sgr0
 }
 
 alertSlack(){
