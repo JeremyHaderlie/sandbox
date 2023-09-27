@@ -1,5 +1,5 @@
 echo "i got this far 1"
-ls -R
+#ls -R
 
 #Initialize alert functions
 source ./sh/alert.sh

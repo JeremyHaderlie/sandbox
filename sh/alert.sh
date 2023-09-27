@@ -30,8 +30,9 @@ alertExit(){
 		if $boldOn; then echo "${red}├${d49}${normal}"; fi
 		echo "${red}╘${eq49}${normal}"
 		echo ""
+		exit 1
 	fi
-	exit 1
+
 }
 
 alertNotify(){
