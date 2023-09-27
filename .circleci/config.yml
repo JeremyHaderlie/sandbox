@@ -8,9 +8,13 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Create docker network
+          name: Validate Branch Name Starts with JiraTicket
           command: . sh/validateJira.sh
 workflows:
   validate:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              ignore:
+                - master
