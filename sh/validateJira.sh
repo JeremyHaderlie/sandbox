@@ -1,3 +1,4 @@
+circleCi=false
 while getopts "c:" opt
 do
 	case "$opt" in
@@ -8,7 +9,7 @@ done
 echo "i got this far 1"
 
 
-if [ "${circleCi}" == true ]; then
+if $circleCi; then
 	git pull --rebase origin "$CIRCLE_BRANCH"
 	currentTerminalPath=$(pwd)
 	echo "$currentTerminalPath"
