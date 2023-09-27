@@ -14,6 +14,7 @@ if $circleCi; then
 fi
 
 #Initialize alert functions
+source ./sh/alertVars.sh
 source ./sh/alert.sh
 
 alertSection -a "Validating Branch Name starts with a Valid Jira Ticket" -l "start" -b false
