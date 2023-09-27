@@ -1,3 +1,5 @@
+echo "i got this far"
+
 #Initialize alret functions
 source ./sh/alert.sh
 
