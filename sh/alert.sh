@@ -1,5 +1,5 @@
 #Import Project Variables
-#source ./sh/alertVars.sh
+. ./sh/alertVars.sh
 
 bold=$(tput bold)
 red=$(tput setaf 1)
