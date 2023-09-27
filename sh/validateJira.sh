@@ -1,4 +1,6 @@
 echo "i got this far 1"
+currentTerminalPath=$(pwd)
+echo "$currentTerminalPath"
 #ls -R
 
 #Initialize alert functions
