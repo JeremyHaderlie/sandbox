@@ -10,7 +10,7 @@ echo "i got this far 1"
 
 
 if $circleCi; then
-	git pull --rebase origin "$CIRCLE_BRANCH"
+	#git pull --rebase origin "$CIRCLE_BRANCH"
 	currentTerminalPath=$(pwd)
 	echo "$currentTerminalPath"
 	ls -R
