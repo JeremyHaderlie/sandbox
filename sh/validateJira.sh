@@ -8,19 +8,18 @@ do
 done
 
 if $circleCi; then
-	#git pull --rebase origin "$CIRCLE_BRANCH"
 	currentTerminalPath=$(pwd)
 	echo "$currentTerminalPath"
-	ls -R
+	#ls -R
 fi
 
 #Initialize alert functions
 . ./sh/alert.sh
 
-alertSection -a "Validating Branch Name starts with a Valid Jira Ticket" -l "start" -b false
+alertSection -a "Validate Branch Name starts Jira Ticket" -l "start" -b false
 #retrieve branch name
-#branch=$(git branch --show-current)
-branch="test-123.1" #branch value for testing
+branch=$(git branch --show-current)
+#branch="test-123.1" #branch value for testing
 
 #validate that branch name has required characters to be a Jira Ticket
 if [[ "$branch" != *"-"* ]] || [[ ! "$branch" =~ [0-9] ]]; then
@@ -35,4 +34,4 @@ alertNotify -a "Branch Name: $branch \n Jira Ticket from Branch Name: $jiraTicke
 
 #http request to Jira api to validate jiraTicket is valid
 
-alertSection -a "Validating Branch Name starts with a Valid Jira Ticket" -l "end" -b false
+alertSection -a "Validate Branch Name starts Jira Ticket" -l "end" -b false
