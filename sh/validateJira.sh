@@ -8,7 +8,7 @@ done
 echo "i got this far 1"
 
 echo "$currentTerminalPath"
-if [ "${circleCi}" == "true" ]; then
+if [ "${circleCi}" == true ]; then
 	git pull --rebase origin "$CIRCLE_BRANCH"
 	currentTerminalPath=$(pwd)
 	ls -R
