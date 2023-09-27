@@ -1,19 +1,18 @@
 version: 2.1
-orbs:
-  slack: circleci/slack@4.12.5
 jobs:
   build:
     docker:
       - image: cimg/node:lts
     steps:
       - checkout
-      - setup_remote_docker
       - run:
-          name: Create docker network
-          command: ./sh/validateJira.sh
-      - store_test_results:
-          path: test-results
+          name: Validate Branch Name Starts with JiraTicket
+          command: sudo bash ./sh/validateJira.sh -c true
 workflows:
   validate:
     jobs:
-      - build
+      - build:
+          filters:
+            branches:
+              ignore:
+                - master

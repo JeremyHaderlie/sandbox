@@ -1,0 +1,15 @@
+{
+	"text": "shell Alert Test",
+	"channel": "INSERT_SLACK_CHANNEL_ID",
+	"username": "shell Alert Test",
+	"icon_emoji": ":debug:",
+	"blocks": [
+		{
+			"type": "section",
+			"text": {
+				"type": "mrkdwn",
+				"text": ":tada:  *TestPostFromShell:*```https://www.linkedin.com/in/jeremyhaderlie/```\n"
+			}
+		}
+	]
+}
