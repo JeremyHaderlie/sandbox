@@ -1,7 +1,12 @@
 echo "i got this far 1"
-currentTerminalPath=$(pwd)
+
 echo "$currentTerminalPath"
-#ls -R
+if [ -z ${CIRCLE_BRANCH} ]; then
+	git status
+	git pull --rebase origin "$CIRCLE_BRANCH"
+	currentTerminalPath=$(pwd)
+	ls -R
+fi
 
 #Initialize alert functions
 source ./sh/alert.sh
