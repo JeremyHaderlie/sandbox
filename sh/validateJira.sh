@@ -1,18 +1,24 @@
-echo "i got this far"
+echo "i got this far 1"
 ls -R
 
 #Initialize alret functions
 source ./sh/alert.sh
+
+echo "i got this far 2"
 
 alertSection -a "Validating Branch Name starts with a Valid Jira Ticket" -l "start" -b false
 #retrieve branch name
 #branch=$(git branch --show-current)
 branch="test-123.1" #branch value for testing
 
+echo "i got this far 3"
+
 #validate that branch name has required characters to be a Jira Ticket
 if [[ "$branch" != *"-"* ]] || [[ ! "$branch" =~ [0-9] ]]; then
 	alertExit -a "Invalid branch name ${branch}. \n Branch name must start with valid Jira Ticket number (including project key prefix). \n example: KEY-0123" -b false
 fi
+
+echo "i got this far 4"
 
 #get ticket number from branch name
 projectKey=$(echo $branch| cut -d'-' -f 1)
