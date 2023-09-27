@@ -1,3 +1,4 @@
+#!/sh/bash
 circleCi=false
 while getopts "c:" opt
 do

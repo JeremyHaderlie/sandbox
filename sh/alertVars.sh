@@ -1,3 +1,4 @@
+#!/sh/bash
 #alertVars
 slackWebhookUrl="INSERT_DEFAULT_SLACK_WEBHOOK_URL"
 SlackTemplateJsonFile="./slackAlertTemplates/slackAlert.json"

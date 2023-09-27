@@ -1,3 +1,4 @@
+#!/sh/bash
 #Import Project Variables
 . ./sh/alertVars.sh
 
