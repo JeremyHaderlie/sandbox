@@ -6,9 +6,6 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Add github.com to known hosts
-          command: ssh-keyscan github.com >> ~/.ssh/known_hosts
-      - run:
           name: Validate Branch Name Starts with JiraTicket
           command: sudo sh ./sh/validateJira.sh -c true
 workflows:
