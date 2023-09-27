@@ -1,6 +1,4 @@
-version: 2.1
-orbs:
-  slack: circleci/slack@4.12.5
+version: 2
 jobs:
   build:
     docker:
