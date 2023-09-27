@@ -2,7 +2,7 @@ echo "i got this far 1"
 ls -R
 
 #Initialize alret functions
-source ./alert.sh
+source ./sh/alert.sh
 
 echo "i got this far 2"
 
