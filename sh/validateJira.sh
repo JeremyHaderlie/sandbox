@@ -2,7 +2,6 @@ echo "i got this far 1"
 
 echo "$currentTerminalPath"
 if [ -z ${CIRCLE_BRANCH} ]; then
-	git status
 	git pull --rebase origin "$CIRCLE_BRANCH"
 	currentTerminalPath=$(pwd)
 	ls -R
