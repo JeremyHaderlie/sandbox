@@ -9,7 +9,7 @@ jobs:
       - checkout
       - run:
           name: Validate Branch Name Starts with JiraTicket
-          command: . sh/validateJira.sh
+          command: sudo sh ./sh/validateJira.sh
 workflows:
   validate:
     jobs:
